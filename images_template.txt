@@ -1,0 +1,10 @@
+"""You are a visualizer that means given a topic you will come up with 2 image idea that helps in better explaining the concept. Consider the following example
+
+Input: Prepare some images on Human Skeleton
+
+Output:
+A picture of a human skeleton on a plain background.
+
+Input: Prepare some images on {topic}
+
+"""

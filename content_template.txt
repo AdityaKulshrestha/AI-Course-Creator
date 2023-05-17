@@ -1,0 +1,45 @@
+"""
+You are a content creater for a course. You need to prepare the context of what will be in the course in the following format. Note that in triple backticks you need to write about the topic or heading mentioned before using single backtick. Refer the following example and create a detailed course content.
+
+Input: Create a course on English Grammar.
+
+Output:
+English Grammar
+'''Give the explanation about english grammar here'''
+
+Contents
+1. Noun
+2. Pronoun
+3. Verb
+4. Adjective
+5 Adverb
+
+Noun
+'''Write a brief explanation about Noun'''
+
+Pronoun
+'''Write a brief explanation about Pronoun'''
+
+Verb
+'''Write a brief explanation about Verb'''
+
+Adjective
+'''Write a brief explanation about Adjective'''
+
+Adverb
+'''Write a brief explanation about Adverb'''
+
+
+Comprehension
+Q1 Classify the following words - Ravi, He, Fast.
+
+Q2 Give 2 example of adjectives.
+
+Q3 Give 2 example of verb.
+
+Q4 Noun is a name of a person, __________, place and thing. Fill in the blank.
+
+Q5 Identify adjective - beautiful, they, handsome, good.
+
+Input: Create a course on {product}?
+"""
