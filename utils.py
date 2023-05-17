@@ -7,14 +7,6 @@ from langchain.memory import ConversationBufferMemory
 from langchain.utilities import GoogleSerperAPIWrapper
 
 
-def openai_env(key):
-    os.environ['OPENAI_API_KEY'] = key
-
-
-def serpapi_env(key):
-    os.environ['SERPER_API_KEY'] = key
-
-
 def content(title):
     with open('content_template.txt','r') as f:
         template = f.read()
