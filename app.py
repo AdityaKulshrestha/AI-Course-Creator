@@ -3,8 +3,8 @@ from utils import openai_env, serpapi_env, content, image_request, images_captio
 
 st.title("AI Course Creator")
 
-openai_key = st.text_input("Enter your OpenAI key", value='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', type = 'password')
-serpapi_key = st.text_input("Enter your SerperAPI key",value='db6cfb60742df4fc29ad54a8c56434346cce3820', type='password')
+openai_key = st.text_input("Enter your OpenAI key", type = 'password')
+serpapi_key = st.text_input("Enter your SerperAPI key", type='password')
 
 openai_env(openai_key)
 serpapi_env(serpapi_key)
