@@ -1,6 +1,6 @@
 import os
 import streamlit as st
-from utils import content, image_request, images_caption
+from utils import content, link_to_image
 
 st.title("AI Course Creator")
 
@@ -15,11 +15,8 @@ title = st.text_input("Enter the title of your course")
 
 if st.button("Submit"):
     response = content(title)
-    st.text(response)
-    img_cap = images_caption(title)
-    img_url = image_request(img_cap)
-    st.subheader(img_cap)
-    st.image(img_url)
+    response = link_to_image(response)
+    st.markdown(response)
 
 
 

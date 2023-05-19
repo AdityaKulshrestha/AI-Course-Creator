@@ -1,41 +1,29 @@
-import os
-from langchain.llms import OpenAI
 from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
-from langchain.memory import ConversationBufferMemory
 from langchain.utilities import GoogleSerperAPIWrapper
+import re
 
 
 def content(title):
-    with open('content_template.txt','r') as f:
+    with open('content_template.txt', 'r') as f:
         template = f.read()
     prompt = PromptTemplate(
-        input_variables=["product"],
+        input_variables=["topic"],
         template=template,
     )
     chain = LLMChain(llm=ChatOpenAI(), prompt=prompt)
     return chain.run(title)
 
 
-def images_caption(title):
-    with open('images_template.txt','r') as f:
-        template_images = f.read()
-    prompt_images = PromptTemplate(
-        input_variables=["topic"],
-        template=template_images,
-    )
-    chain = LLMChain(llm=ChatOpenAI(), prompt=prompt_images)
-    return chain.run(title)
-
-
 def image_request(caption):
     search = GoogleSerperAPIWrapper(type="images")
-    results = search.results(caption)
-    return results['images'][0]['imageUrl']
+    results = search.results(caption.group()[1:-1])
+    print(caption.group()[1:-1])
+    return f"![{caption.group()[1:-1]}]({results['images'][0]['imageUrl']})"
 
 
-
-
-
-
+# Replace image description with image link
+def link_to_image(response):
+    response = re.sub(r'\<(.*?)\>', lambda match: image_request(match), response)
+    return response
