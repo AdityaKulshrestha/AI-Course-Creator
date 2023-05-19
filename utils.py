@@ -19,7 +19,6 @@ def content(title):
 def image_request(caption):
     search = GoogleSerperAPIWrapper(type="images")
     results = search.results(caption.group()[1:-1])
-    print(caption.group()[1:-1])
     return f"![{caption.group()[1:-1]}]({results['images'][0]['imageUrl']})"
 
 
