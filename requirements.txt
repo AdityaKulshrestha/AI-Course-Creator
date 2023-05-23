@@ -1,3 +1,7 @@
 streamlit
 langchain
-OpenAI
+unstructuredpdfloader
+chromadb
+tiktoken
+pdf2image
+openai
