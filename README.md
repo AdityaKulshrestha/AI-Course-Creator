@@ -1,4 +1,4 @@
-# AI-Course-Creater-
+# AI-Course-Creator
 Create your own AI course on any topic in seconds
 
 # Setup 
