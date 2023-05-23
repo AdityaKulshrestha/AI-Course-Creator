@@ -89,10 +89,10 @@ def search_docs(index: VectorStore, topic: str) -> List[Document]:
 
 def get_answer(docs: List[Document], topic: str) -> Dict[str, Any]:
     """Gets an answer to a question from a list of Documents."""
-    with open('../content_template.txt', 'r') as f:
+    with open('content_template.txt', 'r') as f:
         template = f.read()
     prompt = PromptTemplate(
-        input_variables=["summaries", "topic"],
+        input_variables=['summaries', 'topic'],
         template=template,
     )
     chain = load_qa_with_sources_chain(OpenAI(temperature=0), chain_type="stuff", prompt=prompt)
