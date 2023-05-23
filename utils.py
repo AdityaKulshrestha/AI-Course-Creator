@@ -2,6 +2,7 @@ from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.utilities import GoogleSerperAPIWrapper
+from langchain.callbacks import get_openai_callback
 import re
 
 
@@ -12,8 +13,9 @@ def content(title):
         input_variables=["topic"],
         template=template,
     )
-    chain = LLMChain(llm=ChatOpenAI(), prompt=prompt)
-    return chain.run(title)
+    with get_openai_callback() as cb:
+        chain = LLMChain(llm=ChatOpenAI(temperature=0.9), prompt=prompt)
+        return chain.run(title), cb
 
 
 def image_request(caption):

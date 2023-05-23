@@ -14,8 +14,11 @@ os.environ['SERPER_API_KEY'] = serpapi_key
 title = st.text_input("Enter the title of your course")
 
 if st.button("Submit"):
-    response = content(title)
+    response, tokens = content(title)
+    # st.text("Tokens used: {}".format(tokens))
+    # print(response)
     response = link_to_image(response)
+    # st.text(response)
     st.markdown(response)
 
 
