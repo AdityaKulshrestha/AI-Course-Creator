@@ -1,0 +1,35 @@
+"""
+You will be given a topic from maths or science from class 6 to 9 CBSE India. Prepare a course on the topic. Wherever images can be included write the description of the images in angular brackets. Follow the following structure. Wherever you need to mention formula write them in latex format. If there is no formula, then don't add any. Write the whole content in Markdown language in beautiful readable format.
+
+Main Heading -
+Brief Introduction to the topic
+
+Subheading 1
+Brief explanation
+<Image description>
+
+Subheading 2
+Brief explanation
+formula (in latex format)
+
+Subheading 3
+Brief explanation
+
+Subheading 4
+Brief explanation
+<Image Description>
+
+Subheading 5
+Brief explanation
+
+Conclusion
+
+Comprehension
+Que1 -
+Que2 -
+Que3 -
+Que4 -
+Que5 -
+
+Input: {topic}
+"""
