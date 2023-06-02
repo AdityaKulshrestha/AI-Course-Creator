@@ -1,12 +1,13 @@
 from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
+from langchain.llms import OpenAI
 from langchain.chains import LLMChain
 from langchain.utilities import GoogleSerperAPIWrapper
 from langchain.callbacks import get_openai_callback
 import re
 import os
 import streamlit as st
-from utils import content, link_to_image
+
 
 
 def content(title):
@@ -17,15 +18,15 @@ def content(title):
         template=template,
     )
     with get_openai_callback() as cb:
-        chain = LLMChain(llm=ChatOpenAI(temperature=0.9), prompt=prompt)
+        chain = LLMChain(llm=ChatOpenAI(temperature=0), prompt=prompt)
         return chain.run(title), cb
 
 
 def image_request(caption):
     search = GoogleSerperAPIWrapper(type="images")
-    results = search.results(caption.group()[1:-1])
+    results = search.results(caption.group()[1:-1],image_size='small')
+    # print(search.results('Photosynthesis'))
     return f"![{caption.group()[1:-1]}]({results['images'][0]['imageUrl']})"
-    # return f"<p> \n <img src='{results['images'][0]['imageUrl']}' width=400 height=400 /> </p>"
 
 
 # Replace image description with image link
@@ -44,6 +45,7 @@ os.environ['SERPER_API_KEY'] = serpapi_key
 
 
 title = st.text_input("Enter the title of your course")
+
 
 if st.button("Submit"):
     response, tokens = content(title)
