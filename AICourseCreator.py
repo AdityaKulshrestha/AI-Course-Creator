@@ -23,8 +23,7 @@ def content(title):
 
 def image_request(caption, topic):
     search = GoogleSerperAPIWrapper(type="images")
-    results = search.results(caption.group()[1:-1] + " " + topic + ' imagesize:300x300', imgSize='small')
-    print(results)
+    results = search.results(caption.group()[1:-1] + " " + topic + ' imagesize:300x300 filetype:png', imgSize='small')
     return f"![{caption.group()[1:-1]}]({results['images'][0]['imageUrl']})"
 
 
