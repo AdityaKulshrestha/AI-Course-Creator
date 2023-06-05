@@ -23,12 +23,12 @@ $formula: HCl + pepsinogen \to HCl + pepsin$
 ## Small Intestine
 The chyme then enters the small intestine, where it is mixed with bile from the liver and enzymes from the pancreas to further break down the molecules. The walls of the small intestine are lined with tiny finger-like projections called villi, which absorb the nutrients into the bloodstream to be used by the body.
 
-![image of small intestine](https://cdn1.byjus.com/wp-content/uploads/2022/08/small-intestine-diagram.png)
+![image of small intestine](https://img.freepik.com/free-vector/human-intestine-anatomy-diagram-with-duodenum-ileum-cecum-jejunum-appendix-rectum-anus-areas-realistic-vector-illustration_1284-71412.jpg?w=740&t=st=1685962867~exp=1685963467~hmac=9c3a70e7f8825accd01f6043ad1c4c10be814034b87301346d1af0e12caf2b99)
 
 ## Large Intestine
 The remaining waste products then enter the large intestine, where water is absorbed and the waste is formed into feces to be eliminated from the body.
 
-![image of large intestine](https://cdn1.byjus.com/wp-content/uploads/2019/07/Large-Intestine.png)
+![image of large intestine](https://i.pinimg.com/736x/7f/e2/b6/7fe2b67d0cf0f3ec00f65cd3cb43520a.jpg)
 
 ## Liver and Pancreas
 The liver and pancreas are important accessory organs of the digestive system. The liver produces bile, which helps to break down fats in the small intestine. The pancreas produces enzymes that help to break down carbohydrates, fats, and proteins.
